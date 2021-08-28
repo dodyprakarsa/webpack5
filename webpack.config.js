@@ -1,5 +1,13 @@
+const path = require('path');
+
+let mode = 'development';
+
+if (process.env.NODE_ENV === 'production') {
+  mode = 'production';
+}
+
 module.exports = {
-  mode: 'development',
+  mode,
   module: {
     rules: [
       {
@@ -14,6 +22,10 @@ module.exports = {
 
   devtool: 'source-map',
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 9000,
   },
 };
