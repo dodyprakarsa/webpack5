@@ -12,11 +12,25 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   mode,
   //   target,
+  // create images folder
+  output: {
+    assetModuleFilename: 'images/[hash][ext][query]',
+  },
+
   module: {
     rules: [
       {
         test: /.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
+
+        // type: 'asset/resource',
+       
+        // for split images into folder & inline base64
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 30 * 1024
+          },
+        },
       },
       
       {
