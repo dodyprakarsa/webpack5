@@ -1,10 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import './style/index.scss';
+import { render } from 'react-dom';
+import App from './components/App';
 
-const elevenS = {
-  leather: 1,
-  ironS: 2,
-};
-
-// eslint-disable-next-line no-console
-console.log(elevenS);
+render(<App/>, document.getElementById('root'));
