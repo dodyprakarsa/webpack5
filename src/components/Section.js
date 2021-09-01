@@ -1,11 +1,8 @@
-import '../style/index.scss';
-// import pict from '../images/dicoding.jpeg';
-import React from 'react';
+import React from 'react'
 
-const App = () => {
+const Section = () => {
     return (
-        <>
-            <div className="container-xxl">
+        <div className="container-xxl">
                 <div className="row mt-3">
                     <div className="col-lg-4 col-md-6">
                         <div className="mt-3 mb-3">
@@ -208,7 +205,7 @@ const App = () => {
 
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb">
-                                    <li className="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li className="breadcrumb-item"><a href="http://google.com">Home</a></li>
                                     <li className="breadcrumb-item active" aria-current="page">Library</li>
                                 </ol>
                             </nav>
@@ -306,8 +303,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
-        </>
-    );
+    )
 }
 
-export default App;
+export default Section
